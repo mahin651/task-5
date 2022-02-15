@@ -7,4 +7,4 @@ router.get("/:courceID",courceController.cource_details);
 router.put("/:courceID",courceController.cource_update);
 router.delete("/:courceID",courceController.cource_delete);
 
-module.exports= router;
+module.exports=router;

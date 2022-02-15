@@ -32,7 +32,7 @@ const cource_create =async(req,res) =>{
       });
     
       try {
-        const savedCource = await Cource.save();
+        const savedCource = await cources.save();
         res.send(savedCource);
       } catch (error) {
         res.status(400).send(error);
