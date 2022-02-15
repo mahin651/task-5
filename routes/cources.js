@@ -1,7 +1,7 @@
 const router =require("express").Router();
 
 router.post("/");
-router.get("/");
+router.get("/ ", productController.cource_all);
 router.get("/courceID");
 router.put("/courceID");
 router.delete("/courceID");
