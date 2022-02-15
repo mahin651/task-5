@@ -1,15 +1,15 @@
 const mongoose=require("mongoose");
 
-const courceSchema = new.mongoose.Schema({
+const courceSchema = new mongoose.Schema({
 Buyer: String,
 Host: String,
-Amount:Int16Array,
+Amount: String,
 Coursetitle:String,
 Description:String,
 startDate:Date,
-endDate:VarDate,
+endDate:Date,
 
 }
 );
 
-module.exports=mongoose("Cource",courceSchema);
+module.exports=mongoose.model("Cource",courceSchema);

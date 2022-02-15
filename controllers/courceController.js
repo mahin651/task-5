@@ -32,7 +32,7 @@ const cource_create =async(req,res) =>{
       });
     
       try {
-        const savedCource = await product.save();
+        const savedCource = await Cource.save();
         res.send(savedCource);
       } catch (error) {
         res.status(400).send(error);
@@ -42,13 +42,16 @@ const cource_create =async(req,res) =>{
 const cource_update =async(req,res) =>{
     try {
         const cources = {
-          title: req.body.title,
-          price: req.body.price,
-          image: req.body.image,
-          details: req.body.details
+          Buyer: req.body.Buyer,
+          Host: req.body.Host,
+          Amount: req.body.Amount,
+          Coursetitle: req.body.Coursetitle,
+          Description:req.body.Description,
+          startDate:req.body.startDate,
+          endDate:req.body.endDate
         };
     
-        const updatedCource = await Product.findByIdAndUpdate(
+        const updatedCource = await Cource.findByIdAndUpdate(
           { _id: req.params.courceId },
           cources
         );

@@ -1,9 +1,8 @@
 const express= require("express");
 const app =express();
-
-const mongoose= require("mongoose");
 const dotenv=require("dotenv");
-
+const mongoose= require("mongoose");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -13,4 +12,16 @@ mongoose.connect(
     {useUnifiedTopology: true,useNewUrlParser:true},
     ()=> console.log("connected to db !")
 );
-app.listen(5000,() => (console.log("server is running upon port 5000 !")));
+
+//import routes
+const courceRoutes=require("./routes/cources")
+
+//Middle wares
+app.use(express.json());
+app.use(cors());
+
+//route middleware
+app.use("/api/cource",courceRoutes);
+
+
+app.listen(4000,() => (console.log("server is running upon port 4000 !")));
