@@ -1,13 +1,14 @@
 const mongoose=require("mongoose");
 
 const courceSchema = new mongoose.Schema({
+
 Buyer: String,
 Host: String,
-Amount: String,
+Amount: Number,
 Coursetitle:String,
 Description:String,
-startDate:Date,
-endDate:Date,
+startDate:String,
+endDate:String,
 
 }
 );

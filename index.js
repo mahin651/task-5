@@ -24,4 +24,4 @@ app.use(cors());
 app.use("/api/cource",courceRoutes);
 
 
-app.listen(4000,() => (console.log("server is running upon port 4000 !")));
+app.listen(2000,() => (console.log("server is running upon port 2000 !")));

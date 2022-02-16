@@ -1,4 +1,4 @@
-const Cource=require("../model/Cources");
+const Cource= require("../model/Cources");
 
 //get all cources
 const cource_all =async(req,res) =>{
@@ -25,13 +25,12 @@ const cource_create =async(req,res) =>{
         Host: req.body.Host,
         Amount: req.body.Amount,
         Coursetitle: req.body.Coursetitle,
-        Description:req.body.Description,
-        startDate:req.body.startDate,
-        endDate:req.body.endDate
+        Description: req.body.Description,
+        startDate: req.body.startDate,
+        endDate:  req.body.endDate
 
       });
-    
-      try {
+    try {
         const savedCource = await cources.save();
         res.send(savedCource);
       } catch (error) {
@@ -71,9 +70,9 @@ const cource_delete =async(req,res) =>{
 };
 
 module.exports ={
+    cource_create,
     cource_all,
     cource_details,
-    cource_create,
     cource_update,
     cource_delete
 }
