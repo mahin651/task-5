@@ -15,6 +15,7 @@ mongoose.connect(
 
 //import routes
 const courceRoutes=require("./routes/cources")
+const usersRoutes=require("./routes/users")
 
 //Middle wares
 app.use(express.json());
@@ -22,6 +23,7 @@ app.use(cors());
 
 //route middleware
 app.use("/api/cource",courceRoutes);
+app.use("api/users",usersRoutes);
 
 
-app.listen(2000,() => (console.log("server is running upon port 2000 !")));
+app.listen(1000,() => (console.log("server is running upon port 1000 !")));
