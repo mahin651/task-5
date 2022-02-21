@@ -40,8 +40,7 @@ const user_update =async(req,res) =>{
         };
     
         const updatedUser = await User.findByIdAndUpdate(
-          { _id: req.params.userId },
-          cources
+          { _id: req.params.userId },users
         );
         res.json(updatedUser);
       } catch (error) {

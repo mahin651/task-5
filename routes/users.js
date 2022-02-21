@@ -1,5 +1,5 @@
 const router =require("express").Router();
-const usersController=require('../routes/users');
+const usersController=require('../controllers/userController');
 
 router.post("/",usersController.user_create);
 router.get("/",usersController.user_all);
