@@ -1,3 +1,4 @@
+const User= require("../model/Users");
 // all users
 const user_all =async(req,res) =>{
     try {
