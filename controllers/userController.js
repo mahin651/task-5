@@ -17,7 +17,7 @@ const user_details =async(req,res) =>{
         res.json({ message: error });
       }
 };
-//add new cources
+//add new user
 const user_create =async(req,res) =>{
     const users = new User({
         Username: req.body.Username,
@@ -31,7 +31,7 @@ const user_create =async(req,res) =>{
         res.status(400).send(error);
       }
 };
-//update cources
+//update user
 const user_update =async(req,res) =>{
     try {
         const users = {
