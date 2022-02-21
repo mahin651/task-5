@@ -26,4 +26,4 @@ app.use("/api/cource",courceRoutes);
 app.use("api/users",usersRoutes);
 
 
-app.listen(1000,() => (console.log("server is running upon port 1000 !")));
+app.listen(9000,() => (console.log("server is running upon port 9000 !")));
