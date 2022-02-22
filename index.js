@@ -18,7 +18,7 @@ const courceRoutes=require("./routes/cources")
 const usersRoutes=require("./routes/users")
 
 //Middle wares
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //route middleware
@@ -26,4 +26,4 @@ app.use("/api/cource",courceRoutes);
 app.use("/api/users",usersRoutes);
 
 
-app.listen(4000,() => (console.log("server is running upon port 4000 !")));
+app.listen(5000,() => (console.log("server is running upon port 5000 !")));

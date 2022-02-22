@@ -5,7 +5,7 @@ const Cource= require("../model/Cources");
 const cource_all =async(req,res) =>{
     try {
         const cources = await Cource.find();
-        console.log(cources);
+        console.log(Cources);
         res.json(cources);
       } catch (error) {
         res.json({ message: error });
