@@ -48,7 +48,7 @@ const user_update =async(req,res) =>{
         res.json({ message: error });
       }
 };
-//deleate product
+//deleate user
 const user_delete =async(req,res) =>{
     try {
         const removeUser = await User.findByIdAndDelete(req.params.userId);
